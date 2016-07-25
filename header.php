@@ -45,10 +45,10 @@
 		<!-- /.navbar top -->
 
 		<!-- header -->
-		<header class="container">
-			<h1 class="text-center">Pattashi Janakalyan Secondary School &amp; College</h1>
-			<h4 class="text-center">EIIN: 131209</h4>
-			<h4 class="text-center">School Code: 2526</h4>
+		<header class="container text-center">
+			<h1>Pattashi Janakalyan Secondary School &amp; College</h1>
+			<h5>EIIN: 131209</h5>
+			<h5>School Code: 2526</h5>
 		</header>
 		<!-- /.header -->
 

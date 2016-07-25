@@ -29,6 +29,8 @@
 			* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 			*/
 			add_theme_support('post-thumbnails');
+
+			// Add featured image size
 			add_image_size( 'preschool-featured', 1200, 500, true );
 
 			/**
@@ -117,6 +119,17 @@
 
 			return $default;
 		}
+	endif;
+
+	// Register custom image sizes for use in Add Media modal
+	if ( ! function_exists( 'preschool_custom_sizes' ) ) :
+
+		function preschool_custom_sizes( $sizes ) {
+			return array_merge( $sizes, array(
+				'preschool-featured' => __( 'Featured Image' ),
+			) );
+		}
+
 	endif;
 
 ?>

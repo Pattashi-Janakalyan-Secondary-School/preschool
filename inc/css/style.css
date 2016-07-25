@@ -3255,11 +3255,22 @@ article:not(:last-child) {
 article .post-title {
   margin-top: 0;
 }
+@media (max-width: 768px) {
+  article .post-title {
+    padding-top: 15px;
+  }
+}
 article .post-title > a {
   color: #333333;
 }
 article .post-meta {
   color: #555555;
+}
+@media (max-width: 768px) {
+  article .post-meta {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
 }
 article span:not(:last-child) {
   margin-right: 10px;
@@ -3283,6 +3294,9 @@ footer {
 }
 .links li:not(:last-child) {
   margin-bottom: 5px;
+}
+address p {
+  line-height: 1.2;
 }
 .social-links ul {
   padding-left: 0;
@@ -4120,7 +4134,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 24px 15px;
+  padding: 16px 15px;
   font-size: 1.8rem;
   line-height: 2rem;
   height: 50px;
@@ -4168,7 +4182,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 12px -15px;
+  margin: 8px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -4215,8 +4229,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-radius: 0 3px 3px 0;
   }
   .navbar-nav > li > a {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-weight: bold;
     text-align: center;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -6214,16 +6228,20 @@ button.close {
   position: absolute;
   left: 15%;
   right: 15%;
-  bottom: 5px;
+  bottom: 30px;
+  padding: 5px 0;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .carousel-caption .btn {
   text-shadow: none;
+}
+.carousel-caption .carousel-title {
+  margin: 0;
+  line-height: 1.2;
 }
 @media screen and (min-width: 768px) {
   .carousel-control .fa-chevron-left,
@@ -6244,12 +6262,16 @@ button.close {
     margin-right: -25px;
   }
   .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
+    left: 15%;
+    right: 15%;
   }
   .carousel-indicators {
     bottom: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .carousel-caption {
+    display: none;
   }
 }
 /*!
@@ -6764,9 +6786,6 @@ fieldset[disabled] .btn-danger.active {
   border-color: #dcdcdc;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
 }
-.navbar-top {
-  margin-bottom: 5px;
-}
 .navbar-top a {
   font-family: "Montserrat", "Segoe UI", Trebuchet, Tahoma, Arial, sans-serif;
   font-size: 0.8em;
@@ -6774,6 +6793,9 @@ fieldset[disabled] .btn-danger.active {
 }
 header {
   margin-bottom: 10px;
+}
+header h5 {
+  line-height: 1;
 }
 .pad-out {
   padding: 0;

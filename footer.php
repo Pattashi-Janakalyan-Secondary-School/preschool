@@ -39,7 +39,7 @@
 					<h4>School Address</h4>
 					<hr>
 					<address>
-						<p><i class="fa fa-location-arrow"></i> Pattashi Janakalyan Secondary School &amp; College</p>
+						<p><i class="fa fa-map-marker" aria-hidden="true"></i> Pattashi Janakalyan Secondary School &amp; College</p>
 						<p>Talukdar Bazar, Pattashi, Zianagar</p>
 						<p>Pirojpur - 8502</p>
 						<p><i class="fa fa-phone"></i> <a href="tel:+8801718829931">+88 01718 829 931</a></p>
