@@ -22,6 +22,11 @@ jQuery( document ).ready(function($) {
 	if ($(".current-menu-parent").length) {
 		$(".current-menu-parent").addClass("active");
 	}
+
+	$('.media-object').each(function() {
+		$(this).removeAttr('width');
+    $(this).removeAttr('height');
+	});
 });
 
 /**

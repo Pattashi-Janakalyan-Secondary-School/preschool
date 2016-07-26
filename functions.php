@@ -17,6 +17,9 @@
 		// Load Javascript
 		add_action('wp_enqueue_scripts', 'preschool_load_scripts');
 
+		// Register sidebars by running canvas_widgets_init() on the widgets_init hook.
+    add_action( 'widgets_init', 'preschool_widgets_init' );
+
 		/** Filters */
 		add_filter( 'excerpt_more', 'custom_excerpt_more' );
 		add_filter( "the_excerpt", 'add_class_to_excerpt' );
@@ -41,5 +44,6 @@
 		include ( get_template_directory() . '/inc/enqueue.php' );
 		include ( get_template_directory() . '/inc/navwalker.php' );
 		include ( get_template_directory() . '/inc/tweaks.php' );
+		include ( get_template_directory() . '/inc/widgets.php' );
 
 		?>

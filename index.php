@@ -14,25 +14,57 @@
 
 get_header(); ?>
 
-	<div class="container content">
+  <div class="container content">
+    <div class="row">
+      <!-- articles row -->
+      <div class="col-md-9">
 
-		<?php
-			$query = new WP_Query( array( 'tag__not_in' => '6' ) );
-			if ( $query->have_posts() ) :
-				while ( $query->have_posts() ) : $query->the_post();
+        <?php
+          $query = new WP_Query( array( 'tag__not_in' => '6' ) );
+          if ( $query->have_posts() ) :
+            while ( $query->have_posts() ) : $query->the_post();
 
-					get_template_part( 'template-parts/content', get_post_format() );
+              get_template_part( 'template-parts/content', get_post_format() );
 
-				endwhile;
+            endwhile;
 
-				// wp_bs_pagination();
+        ?>
 
-			else :
-				get_template_part( 'template-parts/content', 'none' );
+        <!-- pagination -->
+        <div class="row">
+          <div class="col-md-12">
+            <nav>
+              <ul class="pagination">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div> <!-- /pagination -->
+      </div> <!-- /articles row -->
 
-			endif;
-		?>
+      <?php
+        else :
+          get_template_part( 'template-parts/content', 'none' );
 
-	</div><!-- container -->
+        endif;
+      ?>
+
+      <?php get_sidebar(); ?>
+    </div>
+  </div> <!-- /container -->
 
 <?php get_footer(); ?>

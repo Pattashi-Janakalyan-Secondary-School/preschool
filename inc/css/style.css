@@ -3252,9 +3252,6 @@ input[type="button"].btn-block {
 article:not(:last-child) {
   margin-bottom: 30px;
 }
-article .post-title {
-  margin-top: 0;
-}
 @media (max-width: 768px) {
   article .post-title {
     padding-top: 15px;
